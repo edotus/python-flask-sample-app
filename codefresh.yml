@@ -19,7 +19,7 @@ steps:
     type: deploy
     kind: kubernetes
     cluster: otus-platform-dev-env
-    namespace: otus-web
+    namespace: dev
     when:
       branch:
         only:
@@ -29,3 +29,4 @@ steps:
      image: '${{BuildingDockerImage}}'
      registry: cfcr   
 
+#only build and deploy on dev
